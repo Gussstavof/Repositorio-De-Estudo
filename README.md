@@ -1,2 +1,4 @@
-# Repositorio-De-Estudo
-Repositório de estudo!!!
+# :brazil:	 Repositório De Estudos :open_book:	:pencil2:	
+
+#  :us:	 Study Repository :open_book:	:pencil2:	
+
