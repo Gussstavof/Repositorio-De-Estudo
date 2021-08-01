@@ -1,10 +1,11 @@
+
 package com.fila;
 
 public class Main {
 
     public static void main(String[] args){
 
-        Fila fila = new Fila();
+        Fila<String> fila = new Fila<>();
 
         String barra = "------------------------------";
 
@@ -13,7 +14,7 @@ public class Main {
         String[] posicao = {"Primeiro", "Segundo", "Terceiro", "Quarto"};
 
         for (int i = 0; i < posicao.length; i++){
-            fila.enqueue(new No(posicao[i]));
+            fila.enqueue((posicao[i]));
         }
 
         System.out.println(fila);
@@ -32,7 +33,9 @@ public class Main {
 
         System.out.println(barra);
 
-        fila.enqueue(new No("Quinto"));
+        fila.enqueue(("Quinto"));
+
+        //fila.enqueue((6)); ERRO, Fila só com string
 
         System.out.println(fila);
 

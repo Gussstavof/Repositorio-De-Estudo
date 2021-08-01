@@ -1,18 +1,20 @@
+
 package com.fila;
 
-public class Fila {
-    private No refNoEntrada;
+public class Fila<T> {
+    private No<T> refNoEntrada;
 
     public Fila() {
         this.refNoEntrada  = null;
     }
 
-    public void enqueue(No newNo){
+    public void enqueue(T obj){
+       No newNo =  new No(obj);
         newNo.setRefNo(refNoEntrada);
         refNoEntrada = newNo;
     }
 
-    public No first(){
+    public T first(){
 
         if(!this.isEmpty()){
             No firstNo = refNoEntrada;
@@ -23,13 +25,13 @@ public class Fila {
                     break;
                 }
             }
-            return  firstNo;
+            return (T) firstNo.getObject();
 
         }
         return null;
     }
 
-    public No dequeue(){
+    public T dequeue(){
         if (!this.isEmpty()){
             No firstNo = refNoEntrada;
             No noAuxiliar = refNoEntrada;
@@ -43,7 +45,7 @@ public class Fila {
                     break;
                 }
             }
-            return firstNo;
+            return (T) firstNo.getObject();
         }
         return null;
     }
